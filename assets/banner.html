@@ -1,0 +1,109 @@
+<meta charset="utf-8">
+<title>Profile banner source — Meridian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-900:#0B2545; --navy-700:#13315C; --blue-500:#3C6997; --blue-400:#6590B8;
+    --blue-300:#8DA9C4; --blue-200:#B8CAD9; --blue-100:#D9E2EC;
+    --neutral-900:#1A1A1A; --neutral-700:#454545; --neutral-300:#C8C8C8; --white:#fff;
+    --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',Consolas,monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#DDD; font-family:var(--sans); }
+  .banner {
+    width:800px; height:200px; position:relative; overflow:hidden;
+    display:flex; align-items:center; padding:0 48px;
+  }
+  .banner.light { background:var(--white); border-bottom:1px solid var(--neutral-300); }
+  .banner.dark  { background:var(--navy-900); }
+
+  .eyebrow {
+    font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--blue-500); margin:0 0 12px;
+  }
+  .dark .eyebrow { color:var(--blue-300); }
+
+  h1 {
+    font-size:40px; font-weight:700; letter-spacing:-.01em; line-height:1.15;
+    color:var(--navy-900); margin:0;
+  }
+  .dark h1 { color:var(--white); }
+
+  .rule { width:360px; height:1px; background:var(--neutral-300); margin:16px 0; }
+  .dark .rule { background:rgba(255,255,255,.28); }
+
+  .sub { font-size:14px; line-height:1.5; color:var(--neutral-700); margin:0; }
+  .dark .sub { color:var(--blue-200); }
+
+  .meta {
+    font-family:var(--mono); font-size:11px; letter-spacing:.02em;
+    color:#7A7A7A; margin:12px 0 0;
+  }
+  .dark .meta { color:var(--blue-300); }
+
+  .mark { position:absolute; right:28px; top:0; height:200px; width:300px; }
+  .copy { position:relative; z-index:2; }
+</style>
+
+<div class="banner light" id="light">
+  <svg class="mark" viewBox="0 0 300 200" aria-hidden="true"></svg>
+  <div class="copy">
+    <p class="eyebrow">Quantitative finance &middot; Derivatives &middot; Machine learning</p>
+    <h1>David Arias, CFA</h1>
+    <div class="rule"></div>
+    <p class="sub">Options and volatility modelling, portfolio construction, and applied machine learning for markets.</p>
+    <p class="meta">davidariasfinance.com</p>
+  </div>
+</div>
+
+<div class="banner dark" id="dark">
+  <svg class="mark" viewBox="0 0 300 200" aria-hidden="true"></svg>
+  <div class="copy">
+    <p class="eyebrow">Quantitative finance &middot; Derivatives &middot; Machine learning</p>
+    <h1>David Arias, CFA</h1>
+    <div class="rule"></div>
+    <p class="sub">Options and volatility modelling, portfolio construction, and applied machine learning for markets.</p>
+    <p class="meta">davidariasfinance.com</p>
+  </div>
+</div>
+
+<script>
+// Wireframe volatility-surface mark: smile in moneyness, decaying with maturity.
+// Structural mark, not a data chart — no axes, no values, nothing asserted.
+function surface(svg, stroke, faint) {
+  const NX = 13, NY = 9, W = 132, D = 88, H = 40;
+  const ox = 148, oy = 112;
+  const z = (u, v) => {
+    const m = (u - 0.5) * 2;                    // -1 .. 1 across moneyness
+    const smile = m * m * 0.85 - m * 0.30;      // convexity plus put skew
+    return (smile + 0.30) * (1 - 0.45 * v);     // flattens as maturity extends
+  };
+  const px = (u, v) => {
+    const x = (u - 0.5) * W, y = (v - 0.5) * D;
+    return [ox + (x - y) * 0.94, oy + (x + y) * 0.34 - z(u, v) * H];
+  };
+  const path = pts => 'M' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join('L');
+  const add = (d, w, o) => {
+    const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    el.setAttribute('d', d); el.setAttribute('fill', 'none');
+    el.setAttribute('stroke', o < 1 ? faint : stroke);
+    el.setAttribute('stroke-width', w); el.setAttribute('stroke-linecap', 'square');
+    svg.appendChild(el);
+  };
+  for (let j = 0; j < NY; j++) {
+    const v = j / (NY - 1), pts = [];
+    for (let i = 0; i < NX; i++) pts.push(px(i / (NX - 1), v));
+    add(path(pts), j === 0 ? 1.4 : 1, j === 0 ? 1 : 0.5);
+  }
+  for (let i = 0; i < NX; i++) {
+    const u = i / (NX - 1), pts = [];
+    for (let j = 0; j < NY; j++) pts.push(px(u, j / (NY - 1)));
+    add(path(pts), 1, 0.5);
+  }
+}
+surface(document.querySelector('#light .mark'), '#13315C', '#B8CAD9');
+surface(document.querySelector('#dark .mark'), '#8DA9C4', '#2A4E7E');
+</script>
