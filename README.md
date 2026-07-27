@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/master/assets/banner-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/master/assets/banner-light.png">
-  <img alt="David Arias, CFA. Quantitative finance, derivatives, machine learning." src="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/master/assets/banner-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/banner-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/banner-light.png">
+  <img alt="David Arias, CFA. Quantitative finance, derivatives, machine learning." src="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/banner-light.png">
 </picture>
 
 I build quant models and options tools, and I publish the code together with the write-up. Most of it lives on my site and on YouTube. What sits here are the pieces that stand on their own as code.
