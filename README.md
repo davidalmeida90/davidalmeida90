@@ -18,6 +18,19 @@ I build quant models and options tools, and I publish the code together with the
 | **[spy-iv-surface](https://github.com/davidalmeida90/spy-iv-surface)** | Two pure-numpy MLPs, no autograd framework, learning the SPY implied-volatility surface from real 2010 to 2023 end-of-day option chains. Out-of-time split so the test set is genuinely unseen, an activation study, and a live dashboard. |
 | **[claude-design-fund](https://github.com/davidalmeida90/claude-design-fund)** | A print-first design system for institutional finance output, shipped as a Claude skill. Built by running a fictional asset manager end to end in Claude Design: tokens, components, the monthly report, the website, and the brand film. The exact prompts are in the repo. |
 
+### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/stats-dark.svg">
+  <img alt="Activity over the last 12 months" src="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/stats-light.svg" width="420">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/langs-dark.svg">
+  <img alt="Public code by language" src="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/langs-light.svg" width="420">
+</picture>
+
+<sub>Rendered from the GitHub API by <a href="scripts/render_cards.py">scripts/render_cards.py</a>, refreshed daily by an Action. No third-party card service.</sub>
+
 ### What I work on
 
 Options and volatility: pricing, surfaces, Greeks, hedging. Portfolio construction: mean-variance, hierarchical risk parity, risk-based allocation. And machine learning applied to markets, mostly return prediction and text on filings.
