@@ -15,6 +15,7 @@ I build quant models and options tools, and I publish the code together with the
 
 | Repository | What it is |
 | --- | --- |
+| **[glassbench](https://github.com/davidalmeida90/glassbench)** | An open-source UI for AI trading agents: runs TradingAgents on a real stock, shows the twelve agents live, keeps every run in a database, benchmarks LLMs on the same harness, backtests honestly, and sends the decision to an Interactive Brokers paper account. [Video](https://youtu.be/Bvucb9BpJ1U), [write up](https://davidariasfinance.com/scripts/glassbench/). |
 | **[spy-iv-surface](https://github.com/davidalmeida90/spy-iv-surface)** | Two pure-numpy MLPs, no autograd framework, learning the SPY implied-volatility surface from real 2010 to 2023 end-of-day option chains. Out-of-time split so the test set is genuinely unseen, an activation study, and a live dashboard. |
 | **[claude-design-fund](https://github.com/davidalmeida90/claude-design-fund)** | A print-first design system for institutional finance output, shipped as a Claude skill. Built by running a fictional asset manager end to end in Claude Design: tokens, components, the monthly report, the website, and the brand film. The exact prompts are in the repo. |
 
@@ -35,6 +36,6 @@ I build quant models and options tools, and I publish the code together with the
 
 Options and volatility: pricing, surfaces, Greeks, hedging. Portfolio construction: mean-variance, hierarchical risk parity, risk-based allocation. And machine learning applied to markets, mostly return prediction and text on filings.
 
-Right now I'm replicating Gu, Kelly and Xiu (2020) on roughly 4 million firm-months of US equity data, and running a live experiment where several LLM agents trade the same market against each other.
+Right now I'm replicating Gu, Kelly and Xiu (2020) on roughly 4 million firm-months of US equity data, and building Glassbench, a workbench where LLM trading agents run on real stocks with every run recorded, so their decisions can be judged rather than trusted.
 
 CFA charterholder. Master in Finance. Based in Madrid.
