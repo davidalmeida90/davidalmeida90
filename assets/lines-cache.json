@@ -1,0 +1,20 @@
+{
+ "TauricResearch/TradingAgents": 20,
+ "davidalmeida90/agent-max": 5710,
+ "davidalmeida90/bellwether": 6824,
+ "davidalmeida90/claude-design-fund": 6516,
+ "davidalmeida90/davidalmeida90": 483,
+ "davidalmeida90/deep-learning-for-finance": 1264,
+ "davidalmeida90/delta-hedging-error-monte-carlo": 439,
+ "davidalmeida90/encore-agent-retrieval-model": 62638,
+ "davidalmeida90/endowment-agent-investment": 236786,
+ "davidalmeida90/equity-research-agents": 2350,
+ "davidalmeida90/finance-agent-kit": 14312,
+ "davidalmeida90/first-ml-trading-strategy": 16179,
+ "davidalmeida90/gex-trading-bot": 1261,
+ "davidalmeida90/glassbench": 166555,
+ "davidalmeida90/machine-learning-for-finance": 4128,
+ "davidalmeida90/machine-learning-trading-engine": 28374,
+ "davidalmeida90/quant-models": 22340,
+ "davidalmeida90/spy-iv-surface": 1344
+}
