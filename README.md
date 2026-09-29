@@ -1,4 +1,4 @@
-## David Arias, CFA - The bridge between finance and tech
+## David Arias, CFA - The Bridge Between Finance and Tech
 
 My work started in classic finance: valuation models, portfolio optimisation, option pricing. Over time the projects got more quantitative, then more machine learning, and now most of them are software: AI systems, multi-agent workflows and benchmarks of how language models behave on real financial tasks.
 
