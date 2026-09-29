@@ -14,7 +14,7 @@ That puts me between two worlds. Finance thinks in risk, evidence and capital; t
   <a href="https://davidariasfinance.com"><img src="assets/icons/tile-website.svg" height="40" alt="Website: davidariasfinance.com"></a>
 </p>
 
-<p><img src="https://komarev.com/ghpvc/?username=davidalmeida90&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views"></p>
+<p><img src="https://komarev.com/ghpvc/?username=davidalmeida90&label=GitHub+views&color=0e75b6&style=flat&base=1111" alt="GitHub views: repository views in the 14 days before 29 Sep 2026 plus profile visits since"></p>
 
 <p>
   <a name="github-stats"><img src="https://raw.githubusercontent.com/davidalmeida90/davidalmeida90/main/assets/github-stats.svg" alt="David Arias's GitHub statistics: stars, forks, all-time contributions, lines of code changed, repository views and repositories with contributions" width="360"></a>
